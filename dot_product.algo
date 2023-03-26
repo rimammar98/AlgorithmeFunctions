@@ -1,0 +1,52 @@
+ALGORITHM dot_product
+
+VAR
+V1 : ARRAY_OF INTEGER[length];
+V2: ARRAY_OF INTEGER[length];
+i:INTEGER;
+ps:INTEGER :=0;
+BEGIN
+FOR i FROM 0 TO length(V1)-1 DO
+write("donner l'element de ", i ,"dans le vecteur V1");
+read(V1[i]);
+END_FOR
+FOR i FROM 0 TO length(V2)-1 DO
+write("donner l'element de ", i ,"dans le vecteur V2");
+read(V2[i]);
+END_FOR
+END
+function dot_product(v1, v2, n):
+    IF length(v1) != n or length(v2) != n THEN
+        return 0
+        END_IF   
+        
+        FOR i FROM 0 to n-1 DO
+        ps += v1[i] * v2[i]  
+    return ps 
+END_FOR
+    Function is_orthogonal(v1, v2, n):
+    IF length(v1) != n or length(v2) != n THEN
+        return 0   
+    dp = dot_product(v1, v2, n)
+    END_IF
+
+    IF (dp:=0) THEN
+        return 1
+    ELSE
+        return 0
+    END_IF   
+    
+
+Function pair_orthogonal(vectors, n):
+    FOR i FROM 0 to n-1 DO
+        v1 = vectors[i][0]
+        v2 = vectors[i][1]
+        orthogonal = is_orthogonal(v1, v2, n)
+        END_FOR
+
+        IF orthogonal THEN
+            write("Vectors", v1, est orthogonal.");
+             write("Vectors", v2, est orthogonal.");
+
+            END_IF
+      

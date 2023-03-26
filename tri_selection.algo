@@ -1,0 +1,30 @@
+function Insertion_sort( arr : ARRAY_OF INTEGER[length])
+VAR
+   
+    n,temp:INTEGER;
+    i,j:INTEGER :=0;
+    
+BEGIN
+   
+   
+FOR i FROM 1 to n-1 DO 
+
+    temp := arr;
+    temp :=[i];
+END_FOR;
+       
+WHILE (0 >temps)and(arr[j] > temp) DO
+        
+        arr[j+1] := arr[j];
+        j = j -1;
+    arr[j+1] = temp;
+END_WHILE;
+
+ FOR i FROM 1 to n-1 DO
+    temp := arr[i];
+    j := i - 1;
+END_FOR
+    END_WHILE     
+return arr;
+END;
+ 
